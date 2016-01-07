@@ -5,28 +5,28 @@ var req = scraper.req;
 
 // Test bot
 var fs = require('fs');
-// var bot = require(__dirname+'/API.js');
+var bot = require(__dirname+'/API.js');
 
-// var Alice = new bot('your-bot-token');
+var Alice = new bot('your-bot-token');
 
 // get your chat_id from here
-// Alice.getUpdates().then(console.log)
+Alice.getUpdates().then(console.log)
 
 // try sending a message, and log the HTTP call for confirmation
-// Alice.sendMessage('your-chat-id', 'Hey wanna see some cool art?').then(console.log);
+Alice.sendMessage('your-chat-id', 'Hey wanna see some cool art?').then(console.log);
 
-// Alice.sendPhoto('your-chat-id', fs.createReadStream(__dirname+'/alexiuss.jpg'), 'Chronoscape by Alexiuss').then(console.log)
+Alice.sendPhoto('your-chat-id', fs.createReadStream(__dirname+'/alexiuss.jpg'), 'Chronoscape by Alexiuss').then(console.log)
 
 
-// var kb = {
-//         keyboard: [
-//             ['one'],
-//             ['two', 'three'],
-//             ['four', 'five', 'six']
-//         ],
-//         one_time_keyboard: true
-//     };
-// Alice.sendMessage('your-chat-id', "Choose a lucky number", undefined, undefined, kb)
+var kb = {
+        keyboard: [
+            ['one'],
+            ['two', 'three'],
+            ['four', 'five', 'six']
+        ],
+        one_time_keyboard: true
+    };
+Alice.sendMessage('your-chat-id', "Choose a lucky number", undefined, undefined, kb)
 
 
 
